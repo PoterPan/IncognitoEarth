@@ -25,7 +25,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(EventViewModel(event: EventModel(name: "a", description: "a", date: Date(), organiser: "a", type: "a", location: "a")))
+            
     }
 }
 
