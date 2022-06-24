@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E719F4CB285F86BE0097F224 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719F4CA285F86BE0097F224 /* EventCardView.swift */; };
+		E719F4D02860346D0097F224 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719F4CF2860346D0097F224 /* EventView.swift */; };
+		E719F4D2286035D10097F224 /* eventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719F4D1286035D10097F224 /* eventModel.swift */; };
+		E7A3E2B9285F6544008B417D /* IncognitoEarthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2B8285F6544008B417D /* IncognitoEarthApp.swift */; };
+		E7A3E2BB285F6544008B417D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2BA285F6544008B417D /* ContentView.swift */; };
+		E7A3E2BD285F6546008B417D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A3E2BC285F6546008B417D /* Assets.xcassets */; };
+		E7A3E2C0285F6546008B417D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A3E2BF285F6546008B417D /* Preview Assets.xcassets */; };
+		E7A3E2CA285F6546008B417D /* IncognitoEarthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2C9285F6546008B417D /* IncognitoEarthTests.swift */; };
+		E7A3E2D4285F6546008B417D /* IncognitoEarthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2D3285F6546008B417D /* IncognitoEarthUITests.swift */; };
+		E7A3E2D6285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2D5285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift */; };
+		E7A4CF212864CE2800404D8B /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF1F2864CE2800404D8B /* ImageManager.swift */; };
+		E7A4CF222864CE2800404D8B /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF202864CE2800404D8B /* UploadImage.swift */; };
+		E7A4CF262864D0B100404D8B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF252864D0B100404D8B /* FirebaseAnalytics */; };
+		E7A4CF282864D0B100404D8B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF272864D0B100404D8B /* FirebaseAnalyticsSwift */; };
+		E7A4CF2A2864D0B100404D8B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF292864D0B100404D8B /* FirebaseAuth */; };
+		E7A4CF2C2864D0B100404D8B /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF2B2864D0B100404D8B /* FirebaseAuthCombine-Community */; };
+		E7A4CF2E2864D0B100404D8B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF2D2864D0B100404D8B /* FirebaseFirestore */; };
+		E7A4CF302864D0B100404D8B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF2F2864D0B100404D8B /* FirebaseFirestoreCombine-Community */; };
+		E7A4CF322864D0B100404D8B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF312864D0B100404D8B /* FirebaseFirestoreSwift */; };
+		E7A4CF342864D0B100404D8B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF332864D0B100404D8B /* FirebaseStorage */; };
+		E7A4CF362864D0B100404D8B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF352864D0B100404D8B /* FirebaseStorageCombine-Community */; };
+		E7A4CF3C2864E05200404D8B /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */; };
+		E7A4CF512865E90B00404D8B /* EventBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF502865E90B00404D8B /* EventBlockView.swift */; };
+		E7B7CA6D28622C710021059E /* AddingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA6C28622C710021059E /* AddingEventView.swift */; };
+		E7B7CA70286231C00021059E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA6F286231C00021059E /* ImagePicker.swift */; };
+		E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA722864BFB00021059E /* EventRepository.swift */; };
+		E7B7CA932864C4890021059E /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA922864C4890021059E /* AuthenticationService.swift */; };
+		E7BDFF4E2860D4710074AFF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7BDFF4D2860D4710074AFF6 /* GoogleService-Info.plist */; };
+		E7BDFF5B2860DAB00074AFF6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDFF5A2860DAB00074AFF6 /* LoginViewModel.swift */; };
+		E7BDFF5E2860DBFB0074AFF6 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDFF5C2860DBFB0074AFF6 /* LoginPage.swift */; };
+		E7BDFF5F2860DBFB0074AFF6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDFF5D2860DBFB0074AFF6 /* Home.swift */; };
+		E7BDFF612860DC830074AFF6 /* LoginStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDFF602860DC830074AFF6 /* LoginStatusView.swift */; };
+		E7BDFF632860E13A0074AFF6 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDFF622860E13A0074AFF6 /* EventViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7A3E2C6285F6546008B417D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7A3E2AD285F6544008B417D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A3E2B4285F6544008B417D;
+			remoteInfo = IncognitoEarth;
+		};
+		E7A3E2D0285F6546008B417D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7A3E2AD285F6544008B417D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A3E2B4285F6544008B417D;
+			remoteInfo = IncognitoEarth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E719F4CA285F86BE0097F224 /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		E719F4CF2860346D0097F224 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		E719F4D1286035D10097F224 /* eventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventModel.swift; sourceTree = "<group>"; };
+		E7A3E2B5285F6544008B417D /* IncognitoEarth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncognitoEarth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A3E2B8285F6544008B417D /* IncognitoEarthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoEarthApp.swift; sourceTree = "<group>"; };
+		E7A3E2BA285F6544008B417D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E7A3E2BC285F6546008B417D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7A3E2BF285F6546008B417D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7A3E2C5285F6546008B417D /* IncognitoEarthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncognitoEarthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A3E2C9285F6546008B417D /* IncognitoEarthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoEarthTests.swift; sourceTree = "<group>"; };
+		E7A3E2CF285F6546008B417D /* IncognitoEarthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncognitoEarthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A3E2D3285F6546008B417D /* IncognitoEarthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoEarthUITests.swift; sourceTree = "<group>"; };
+		E7A3E2D5285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoEarthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7A4CF1F2864CE2800404D8B /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E7A4CF202864CE2800404D8B /* UploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		E7A4CF502865E90B00404D8B /* EventBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlockView.swift; sourceTree = "<group>"; };
+		E7B7CA6C28622C710021059E /* AddingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingEventView.swift; sourceTree = "<group>"; };
+		E7B7CA6F286231C00021059E /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E7B7CA722864BFB00021059E /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		E7B7CA922864C4890021059E /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		E7BDFF4D2860D4710074AFF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7BDFF5A2860DAB00074AFF6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E7BDFF5C2860DBFB0074AFF6 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		E7BDFF5D2860DBFB0074AFF6 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E7BDFF602860DC830074AFF6 /* LoginStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStatusView.swift; sourceTree = "<group>"; };
+		E7BDFF622860E13A0074AFF6 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7A3E2B2285F6544008B417D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A4CF282864D0B100404D8B /* FirebaseAnalyticsSwift in Frameworks */,
+				E7A4CF2A2864D0B100404D8B /* FirebaseAuth in Frameworks */,
+				E7A4CF262864D0B100404D8B /* FirebaseAnalytics in Frameworks */,
+				E7A4CF322864D0B100404D8B /* FirebaseFirestoreSwift in Frameworks */,
+				E7A4CF302864D0B100404D8B /* FirebaseFirestoreCombine-Community in Frameworks */,
+				E7A4CF342864D0B100404D8B /* FirebaseStorage in Frameworks */,
+				E7A4CF2E2864D0B100404D8B /* FirebaseFirestore in Frameworks */,
+				E7A4CF362864D0B100404D8B /* FirebaseStorageCombine-Community in Frameworks */,
+				E7A4CF2C2864D0B100404D8B /* FirebaseAuthCombine-Community in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3E2C2285F6546008B417D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3E2CC285F6546008B417D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E719F4CC286034280097F224 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2BA285F6544008B417D /* ContentView.swift */,
+				E719F4CF2860346D0097F224 /* EventView.swift */,
+				E719F4CA285F86BE0097F224 /* EventCardView.swift */,
+				E7A4CF502865E90B00404D8B /* EventBlockView.swift */,
+				E7BDFF5D2860DBFB0074AFF6 /* Home.swift */,
+				E7BDFF602860DC830074AFF6 /* LoginStatusView.swift */,
+				E7BDFF5C2860DBFB0074AFF6 /* LoginPage.swift */,
+				E7B7CA6C28622C710021059E /* AddingEventView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E719F4CD2860342E0097F224 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E7BDFF622860E13A0074AFF6 /* EventViewModel.swift */,
+				E7BDFF5A2860DAB00074AFF6 /* LoginViewModel.swift */,
+				E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E719F4CE286034370097F224 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E719F4D1286035D10097F224 /* eventModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7A3E2AC285F6544008B417D = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2B7285F6544008B417D /* IncognitoEarth */,
+				E7A3E2C8285F6546008B417D /* IncognitoEarthTests */,
+				E7A3E2D2285F6546008B417D /* IncognitoEarthUITests */,
+				E7A3E2B6285F6544008B417D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7A3E2B6285F6544008B417D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2B5285F6544008B417D /* IncognitoEarth.app */,
+				E7A3E2C5285F6546008B417D /* IncognitoEarthTests.xctest */,
+				E7A3E2CF285F6546008B417D /* IncognitoEarthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7A3E2B7285F6544008B417D /* IncognitoEarth */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2B8285F6544008B417D /* IncognitoEarthApp.swift */,
+				E7BDFF4D2860D4710074AFF6 /* GoogleService-Info.plist */,
+				E719F4CE286034370097F224 /* Models */,
+				E719F4CC286034280097F224 /* Views */,
+				E7B7CA942864C4A30021059E /* Services */,
+				E7B7CA712864BF840021059E /* Repositories */,
+				E719F4CD2860342E0097F224 /* ViewModels */,
+				E7A4CF232864CE3800404D8B /* Utils */,
+				E7A4CF1F2864CE2800404D8B /* ImageManager.swift */,
+				E7A4CF202864CE2800404D8B /* UploadImage.swift */,
+				E7A3E2BC285F6546008B417D /* Assets.xcassets */,
+				E7A3E2BE285F6546008B417D /* Preview Content */,
+			);
+			path = IncognitoEarth;
+			sourceTree = "<group>";
+		};
+		E7A3E2BE285F6546008B417D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2BF285F6546008B417D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7A3E2C8285F6546008B417D /* IncognitoEarthTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2C9285F6546008B417D /* IncognitoEarthTests.swift */,
+			);
+			path = IncognitoEarthTests;
+			sourceTree = "<group>";
+		};
+		E7A3E2D2285F6546008B417D /* IncognitoEarthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3E2D3285F6546008B417D /* IncognitoEarthUITests.swift */,
+				E7A3E2D5285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift */,
+			);
+			path = IncognitoEarthUITests;
+			sourceTree = "<group>";
+		};
+		E7A4CF232864CE3800404D8B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E7B7CA6E286231AA0021059E /* UIViewRepresentables */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E7B7CA6E286231AA0021059E /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				E7B7CA6F286231C00021059E /* ImagePicker.swift */,
+			);
+			path = UIViewRepresentables;
+			sourceTree = "<group>";
+		};
+		E7B7CA712864BF840021059E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E7B7CA722864BFB00021059E /* EventRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E7B7CA942864C4A30021059E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E7B7CA922864C4890021059E /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7A3E2B4285F6544008B417D /* IncognitoEarth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A3E2D9285F6546008B417D /* Build configuration list for PBXNativeTarget "IncognitoEarth" */;
+			buildPhases = (
+				E7A3E2B1285F6544008B417D /* Sources */,
+				E7A3E2B2285F6544008B417D /* Frameworks */,
+				E7A3E2B3285F6544008B417D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IncognitoEarth;
+			packageProductDependencies = (
+				E7A4CF252864D0B100404D8B /* FirebaseAnalytics */,
+				E7A4CF272864D0B100404D8B /* FirebaseAnalyticsSwift */,
+				E7A4CF292864D0B100404D8B /* FirebaseAuth */,
+				E7A4CF2B2864D0B100404D8B /* FirebaseAuthCombine-Community */,
+				E7A4CF2D2864D0B100404D8B /* FirebaseFirestore */,
+				E7A4CF2F2864D0B100404D8B /* FirebaseFirestoreCombine-Community */,
+				E7A4CF312864D0B100404D8B /* FirebaseFirestoreSwift */,
+				E7A4CF332864D0B100404D8B /* FirebaseStorage */,
+				E7A4CF352864D0B100404D8B /* FirebaseStorageCombine-Community */,
+			);
+			productName = IncognitoEarth;
+			productReference = E7A3E2B5285F6544008B417D /* IncognitoEarth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7A3E2C4285F6546008B417D /* IncognitoEarthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A3E2DC285F6546008B417D /* Build configuration list for PBXNativeTarget "IncognitoEarthTests" */;
+			buildPhases = (
+				E7A3E2C1285F6546008B417D /* Sources */,
+				E7A3E2C2285F6546008B417D /* Frameworks */,
+				E7A3E2C3285F6546008B417D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7A3E2C7285F6546008B417D /* PBXTargetDependency */,
+			);
+			name = IncognitoEarthTests;
+			productName = IncognitoEarthTests;
+			productReference = E7A3E2C5285F6546008B417D /* IncognitoEarthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7A3E2CE285F6546008B417D /* IncognitoEarthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A3E2DF285F6546008B417D /* Build configuration list for PBXNativeTarget "IncognitoEarthUITests" */;
+			buildPhases = (
+				E7A3E2CB285F6546008B417D /* Sources */,
+				E7A3E2CC285F6546008B417D /* Frameworks */,
+				E7A3E2CD285F6546008B417D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7A3E2D1285F6546008B417D /* PBXTargetDependency */,
+			);
+			name = IncognitoEarthUITests;
+			productName = IncognitoEarthUITests;
+			productReference = E7A3E2CF285F6546008B417D /* IncognitoEarthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7A3E2AD285F6544008B417D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					E7A3E2B4285F6544008B417D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					E7A3E2C4285F6546008B417D = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = E7A3E2B4285F6544008B417D;
+					};
+					E7A3E2CE285F6546008B417D = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = E7A3E2B4285F6544008B417D;
+					};
+				};
+			};
+			buildConfigurationList = E7A3E2B0285F6544008B417D /* Build configuration list for PBXProject "IncognitoEarth" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7A3E2AC285F6544008B417D;
+			packageReferences = (
+				E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = E7A3E2B6285F6544008B417D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7A3E2B4285F6544008B417D /* IncognitoEarth */,
+				E7A3E2C4285F6546008B417D /* IncognitoEarthTests */,
+				E7A3E2CE285F6546008B417D /* IncognitoEarthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7A3E2B3285F6544008B417D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A3E2C0285F6546008B417D /* Preview Assets.xcassets in Resources */,
+				E7A3E2BD285F6546008B417D /* Assets.xcassets in Resources */,
+				E7BDFF4E2860D4710074AFF6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3E2C3285F6546008B417D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3E2CD285F6546008B417D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7A3E2B1285F6544008B417D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E719F4CB285F86BE0097F224 /* EventCardView.swift in Sources */,
+				E7A3E2BB285F6544008B417D /* ContentView.swift in Sources */,
+				E7BDFF5B2860DAB00074AFF6 /* LoginViewModel.swift in Sources */,
+				E7BDFF632860E13A0074AFF6 /* EventViewModel.swift in Sources */,
+				E7A4CF222864CE2800404D8B /* UploadImage.swift in Sources */,
+				E7BDFF612860DC830074AFF6 /* LoginStatusView.swift in Sources */,
+				E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */,
+				E7A4CF212864CE2800404D8B /* ImageManager.swift in Sources */,
+				E7A3E2B9285F6544008B417D /* IncognitoEarthApp.swift in Sources */,
+				E7BDFF5E2860DBFB0074AFF6 /* LoginPage.swift in Sources */,
+				E719F4D02860346D0097F224 /* EventView.swift in Sources */,
+				E7BDFF5F2860DBFB0074AFF6 /* Home.swift in Sources */,
+				E7A4CF3C2864E05200404D8B /* EventListViewModel.swift in Sources */,
+				E7B7CA70286231C00021059E /* ImagePicker.swift in Sources */,
+				E719F4D2286035D10097F224 /* eventModel.swift in Sources */,
+				E7B7CA6D28622C710021059E /* AddingEventView.swift in Sources */,
+				E7B7CA932864C4890021059E /* AuthenticationService.swift in Sources */,
+				E7A4CF512865E90B00404D8B /* EventBlockView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3E2C1285F6546008B417D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A3E2CA285F6546008B417D /* IncognitoEarthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A3E2CB285F6546008B417D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A3E2D6285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift in Sources */,
+				E7A3E2D4285F6546008B417D /* IncognitoEarthUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7A3E2C7285F6546008B417D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A3E2B4285F6544008B417D /* IncognitoEarth */;
+			targetProxy = E7A3E2C6285F6546008B417D /* PBXContainerItemProxy */;
+		};
+		E7A3E2D1285F6546008B417D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A3E2B4285F6544008B417D /* IncognitoEarth */;
+			targetProxy = E7A3E2D0285F6546008B417D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E7A3E2D7285F6546008B417D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7A3E2D8285F6546008B417D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7A3E2DA285F6546008B417D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IncognitoEarth/Preview Content\"";
+				DEVELOPMENT_TEAM = WTV7G438ZG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = poterpan.IncognitoEarth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7A3E2DB285F6546008B417D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IncognitoEarth/Preview Content\"";
+				DEVELOPMENT_TEAM = WTV7G438ZG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = poterpan.IncognitoEarth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7A3E2DD285F6546008B417D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WTV7G438ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = poterpan.IncognitoEarthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IncognitoEarth.app/IncognitoEarth";
+			};
+			name = Debug;
+		};
+		E7A3E2DE285F6546008B417D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WTV7G438ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = poterpan.IncognitoEarthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IncognitoEarth.app/IncognitoEarth";
+			};
+			name = Release;
+		};
+		E7A3E2E0285F6546008B417D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WTV7G438ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = poterpan.IncognitoEarthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IncognitoEarth;
+			};
+			name = Debug;
+		};
+		E7A3E2E1285F6546008B417D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WTV7G438ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = poterpan.IncognitoEarthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IncognitoEarth;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7A3E2B0285F6544008B417D /* Build configuration list for PBXProject "IncognitoEarth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A3E2D7285F6546008B417D /* Debug */,
+				E7A3E2D8285F6546008B417D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A3E2D9285F6546008B417D /* Build configuration list for PBXNativeTarget "IncognitoEarth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A3E2DA285F6546008B417D /* Debug */,
+				E7A3E2DB285F6546008B417D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A3E2DC285F6546008B417D /* Build configuration list for PBXNativeTarget "IncognitoEarthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A3E2DD285F6546008B417D /* Debug */,
+				E7A3E2DE285F6546008B417D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A3E2DF285F6546008B417D /* Build configuration list for PBXNativeTarget "IncognitoEarthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A3E2E0285F6546008B417D /* Debug */,
+				E7A3E2E1285F6546008B417D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7A4CF252864D0B100404D8B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E7A4CF272864D0B100404D8B /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		E7A4CF292864D0B100404D8B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E7A4CF2B2864D0B100404D8B /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		E7A4CF2D2864D0B100404D8B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E7A4CF2F2864D0B100404D8B /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		E7A4CF312864D0B100404D8B /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		E7A4CF332864D0B100404D8B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		E7A4CF352864D0B100404D8B /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A4CF242864D0B100404D8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E7A3E2AD285F6544008B417D /* Project object */;
+}
