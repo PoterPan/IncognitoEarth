@@ -90,7 +90,7 @@ struct EventDetailView: View {
                 .padding(.horizontal, 5)
             }
         }
-        .ignoresSafeArea()
+        .ignoresSafeArea(.all, edges: .top)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -106,7 +106,7 @@ struct EventDetailView: View {
 
 struct EventDetailView_Previews: PreviewProvider {
     
-    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", date: Date(), organiser: "Poter", type: "aaa", location: "KH")
+    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", organiser: "Poter", date: Date(), type: "aaa", location: "KH")
     
     static var previews: some View {
         EventDetailView(eventViewModel: EventViewModel(event: event1))

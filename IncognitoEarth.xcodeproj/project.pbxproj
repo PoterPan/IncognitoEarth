@@ -33,7 +33,6 @@
 		E7A4CF5628683E7600404D8B /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5528683E7600404D8B /* EventDetailView.swift */; };
 		E7A4CF5828684A0500404D8B /* EventDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5728684A0500404D8B /* EventDetailCardView.swift */; };
 		E7A4CF5A28684FCE00404D8B /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5928684FCE00404D8B /* LikeButton.swift */; };
-		E7A4CF5E2868634200404D8B /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5D2868634200404D8B /* FloatingActionButton.swift */; };
 		E7B7CA6D28622C710021059E /* AddingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA6C28622C710021059E /* AddingEventView.swift */; };
 		E7B7CA70286231C00021059E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA6F286231C00021059E /* ImagePicker.swift */; };
 		E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA722864BFB00021059E /* EventRepository.swift */; };
@@ -84,7 +83,6 @@
 		E7A4CF5528683E7600404D8B /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		E7A4CF5728684A0500404D8B /* EventDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCardView.swift; sourceTree = "<group>"; };
 		E7A4CF5928684FCE00404D8B /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
-		E7A4CF5D2868634200404D8B /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		E7B7CA6C28622C710021059E /* AddingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingEventView.swift; sourceTree = "<group>"; };
 		E7B7CA6F286231C00021059E /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E7B7CA722864BFB00021059E /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				E7BDFF602860DC830074AFF6 /* LoginStatusView.swift */,
 				E7BDFF5C2860DBFB0074AFF6 /* LoginPage.swift */,
 				E7A4CF5428683E2400404D8B /* Event */,
-				E7A4CF5D2868634200404D8B /* FloatingActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -426,7 +423,6 @@
 				E7BDFF612860DC830074AFF6 /* LoginStatusView.swift in Sources */,
 				E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */,
 				E7A4CF212864CE2800404D8B /* ImageManager.swift in Sources */,
-				E7A4CF5E2868634200404D8B /* FloatingActionButton.swift in Sources */,
 				E7A3E2B9285F6544008B417D /* IncognitoEarthApp.swift in Sources */,
 				E7BDFF5E2860DBFB0074AFF6 /* LoginPage.swift in Sources */,
 				E719F4D02860346D0097F224 /* EventView.swift in Sources */,

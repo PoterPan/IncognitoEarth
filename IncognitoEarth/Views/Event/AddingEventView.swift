@@ -19,7 +19,7 @@ struct AddingEventView: View {
     @State var newImage: String = ""
     @State var newName: String = ""
     @State var newDate: Date = Date()
-    @State var newType: String = ""
+    @State var newType: String = "請選擇"
     let types = ["請選擇","環境保護","市容維護","其他"]
     @State var newLocation: String = ""
     @State var newDescription: String = ""
@@ -94,6 +94,7 @@ struct AddingEventView: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.accentColor, lineWidth: 3)
+//                            .frame(minHeight: 35)
                     )
                 }
                 
@@ -158,7 +159,7 @@ struct AddingEventView: View {
             }
             
             let imageData = imgSelected.jpegData(compressionQuality: 0.5)
-            let newEvent = EventModel(name: newName, description: newDescription,eventImage: imageData ,date: newDate, organiser: "a", type: newType, location: newLocation)
+            let newEvent = EventModel(name: newName, description: newDescription, eventImage: imageData ,date: newDate, type: newType, location: newLocation)
             eventListVM.create(newEvent)
             presentationMode.wrappedValue.dismiss()
             
@@ -170,6 +171,11 @@ struct AddingEventView: View {
     func textIsExist() -> Bool {
         if newName.count < 1 {
             alertTitle = "請輸入產品名稱"
+            showAlert.toggle()
+            return false
+        }
+        if newType == "請選擇" {
+            alertTitle = "請選擇活動類型"
             showAlert.toggle()
             return false
         }

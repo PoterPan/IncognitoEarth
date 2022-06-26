@@ -14,10 +14,10 @@ struct EventModel: Identifiable, Codable {
     let name: String
     let description: String
     var userId: String?
+    var organiser: String?
     var eventId: String?
     var eventImage: Data?
     let date: Date
-    let organiser: String?
     let type: String
     let location: String
     

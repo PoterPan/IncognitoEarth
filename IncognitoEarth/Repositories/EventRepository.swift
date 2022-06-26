@@ -67,6 +67,7 @@ class EventRepository: ObservableObject {
                 do {
                     var newEvent = event
                     newEvent.userId = self.userId
+                    newEvent.organiser = self.userId
                     newEvent.eventId = eventID
                     _ = try self.store.collection(self.path).addDocument(from: newEvent)
                 } catch {

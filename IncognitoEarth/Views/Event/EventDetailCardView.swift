@@ -13,7 +13,7 @@ struct EventDetailCardView: View {
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy/MM/dd' 'HH:mm"
         return formatter
     }
 
@@ -75,7 +75,7 @@ struct EventDetailCardView: View {
 }
 struct EventDetailCardView_Previews: PreviewProvider {
     
-    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", date: Date(), organiser: "Poter", type: "aaa", location: "KH")
+    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", organiser: "Poter", date: Date(), type: "aaa", location: "KH")
 
     static var previews: some View {
         EventDetailView(eventViewModel: EventViewModel(event: event1))

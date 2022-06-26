@@ -71,14 +71,14 @@ struct EventCardView: View {
             .padding(8)
             
         }
-        .frame(width: 320, height: 120)
+        .frame(width: UIScreen.main.bounds.size.width-70, height: 120)
     }
 }
 
 
 struct EventCardView_Previews: PreviewProvider {
 
-    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", date: Date(), organiser: "Poter", type: "aaa", location: "KH")
+    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", organiser: "Poter", date: Date(), type: "aaa", location: "KH")
 
     static var previews: some View {
         EventCardView(eventViewModel: EventViewModel(event: event1))

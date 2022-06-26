@@ -53,7 +53,7 @@ struct EventBlockView: View {
 }
 
 struct EventBlockView_Previews: PreviewProvider {
-    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", date: Date(), organiser: "Poter", type: "aaa", location: "KH")
+    static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", organiser: "Poter", date: Date(), type: "aaa", location: "KH")
     
     static var previews: some View {
         EventBlockView(eventViewModel: EventViewModel(event: event1))
