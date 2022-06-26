@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct EventBlockView: View {
+    
+    var eventImg : UIImage = UIImage(named: "defaultImage")!
+    
     var eventViewModel: EventViewModel
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.gray)
-                .shadow(radius: 5)
+            VStack{
+                if eventViewModel.event.eventImage != nil {
+                    Image(uiImage: UIImage(data: eventViewModel.event.eventImage!) ?? eventImg)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 180, height: 120)
+                        .clipped()
+                    //                        .scaledToFit()
+                        .cornerRadius(20)
+                } else {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(.gray)
+                }
+            }
             HStack {
                 VStack(alignment: .leading) {
                     Spacer()
@@ -40,12 +54,12 @@ struct EventBlockView: View {
 
 struct EventBlockView_Previews: PreviewProvider {
     static var event1 = EventModel(name: "路面維護", description: "aaaaaaaa", date: Date(), organiser: "Poter", type: "aaa", location: "KH")
-
+    
     static var previews: some View {
         EventBlockView(eventViewModel: EventViewModel(event: event1))
             .previewLayout(.sizeThatFits)
         EventView()
             .environmentObject(EventListViewModel())
-
+        
     }
 }

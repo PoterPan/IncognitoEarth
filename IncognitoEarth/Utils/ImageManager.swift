@@ -50,11 +50,11 @@ class ImageManager {
 
     }
     
-    func uploadStoryImage(storyID: String, image: Data, handler: @escaping (_ success: Bool) -> ()) {
+    func uploadStoryImage(eventID: String, image: Data, handler: @escaping (_ success: Bool) -> ()) {
         // convert image to UIImage can force unwrap because a default image is passed if no image selected
         let image = UIImage(data: image)!
         // Get the path where we will save the image
-        let path = getStoryImagePath(storyID: storyID)
+        let path = getStoryImagePath(eventID: eventID)
       
         // Save image to path
         DispatchQueue.global(qos: .userInteractive).async {
@@ -82,10 +82,10 @@ class ImageManager {
 
     }
 
-    func downloadStoryImage(storyID: String, handler: @escaping (_ image: UIImage?) -> ()) {
+    func downloadStoryImage(eventID: String, handler: @escaping (_ image: UIImage?) -> ()) {
 
         // Get the path where the image is saved
-        let path = getStoryImagePath(storyID: storyID)
+        let path = getStoryImagePath(eventID: eventID)
 
         // Download the image from path
         DispatchQueue.global(qos: .userInteractive).async {
@@ -108,9 +108,9 @@ class ImageManager {
         return storagePath
     }
     
-    private func getStoryImagePath(storyID: String) -> StorageReference {
-        let storyPath = "stories/\(storyID)/1"
-        let storagePath = REF_STOR.reference(withPath: storyPath)
+    private func getStoryImagePath(eventID: String) -> StorageReference {
+        let eventPath = "events/\(eventID)/1"
+        let storagePath = REF_STOR.reference(withPath: eventPath)
         return storagePath
     }
     

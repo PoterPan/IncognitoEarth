@@ -27,12 +27,6 @@ struct Home: View {
                 }
             }
             
-            AddingEventView(eventListVM: EventListViewModel()).tabItem{
-                NavigationLink(destination: AddingEventView(eventListVM: EventListViewModel())) {
-                    Image(systemName: "flag.fill")
-                    Text("新增頁面")
-                }
-            }
         }
         
     }

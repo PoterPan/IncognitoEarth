@@ -9,6 +9,8 @@ import SwiftUI
 
 struct EventCardView: View {
     
+    var eventImg : UIImage = UIImage(named: "defaultImage")!
+    
     var eventViewModel: EventViewModel
     
     var dateFormatter: DateFormatter {
@@ -23,9 +25,21 @@ struct EventCardView: View {
                 .fill(Color(#colorLiteral(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)))
                 .shadow(radius: 5)
             HStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(.gray)
-                    .frame(width: 120)
+                VStack{
+                    if eventViewModel.event.eventImage != nil {
+                        Image(uiImage: UIImage(data: eventViewModel.event.eventImage!) ?? eventImg)
+                            .resizable()
+//                            .scaledToFit()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 120, height: 90)
+                            .clipped()
+                            .cornerRadius(20)
+                    } else {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                            .frame(width: 120, height: 90)
+                    }
+                }
                 VStack(alignment: .leading, spacing: 8) {
                     Text(dateFormatter.string(from: eventViewModel.event.date))
                         .font(.caption)

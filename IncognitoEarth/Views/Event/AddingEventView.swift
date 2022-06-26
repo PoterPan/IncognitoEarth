@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct AddingEventView: View {
-//    @Environment(\.presentationMode) var presentationMode
+    
+    //To Close Adding View
+    @Environment(\.presentationMode) var presentationMode
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+
+    
     @ObservedObject var eventListVM: EventListViewModel
     
     @State var newImage: String = ""
     @State var newName: String = ""
     @State var newDate: Date = Date()
     @State var newType: String = ""
-    let types = ["環境保護","市容維護","其他"]
-    @State private var selectedName = "其他"
+    let types = ["請選擇","環境保護","市容維護","其他"]
     @State var newLocation: String = ""
     @State var newDescription: String = ""
+    @State var imgSelected = UIImage(named: "defaultImage")!
     
     @State private var isShowPhotoLibrary = false
-    @State private var imgSelected = UIImage()
     
     @FocusState private var isFocused: Bool
     
@@ -35,12 +39,16 @@ struct AddingEventView: View {
             VStack() {
                 
                 ZStack(){
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(maxWidth: .infinity, minHeight: 120)
-                        .foregroundColor(Color.gray.opacity(0.5))
-                    
+                    Image(uiImage: self.imgSelected)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 350, height: 220)
+                        .clipped()
+                        .cornerRadius(20)
+
+
                     Button {
-                        //
+                        isShowPhotoLibrary.toggle()
                     } label: {
                         HStack{
                             Image(systemName: "plus.square.on.square")
@@ -57,7 +65,7 @@ struct AddingEventView: View {
                     
                 }
                 .sheet(isPresented: $isShowPhotoLibrary) {
-                    ImagePicker(sourceType: .camera, selectedImage: self.$imgSelected)
+                    ImagePicker(sourceType: sourceType, selectedImage: $imgSelected)
                 }
 
                 HStack {
@@ -73,7 +81,7 @@ struct AddingEventView: View {
                 HStack {
                     Text("類型：")
                     Spacer()
-                    Picker(selection: $selectedName) {
+                    Picker(selection: $newType) {
                         ForEach(types, id: \.self) { type in
                             Text(type)
                         }
@@ -138,37 +146,8 @@ struct AddingEventView: View {
                 
             }
             .padding(16)
-            .navigationTitle("新增物品")
-            .navigationBarTitleDisplayMode(.inline)
             .alert(isPresented: $showAlert, content: getAlert)
-            .toolbar{
-                ToolbarItemGroup(placement: .navigationBarLeading){
-                    //                    closeView
-                    Button(action: {
-                        
-                        isFocused = false
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(.black)
-                    }
-                }
-                ToolbarItemGroup(placement: .navigationBarTrailing){
-                    //                    saveData
-                    Button (action: {
-                        saveButtonPressed()
-                        isFocused = false
-                    })
-                    {
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(.black)
-                        
-                    }
-                }
-            }
+            
         }
     }
     
@@ -178,13 +157,11 @@ struct AddingEventView: View {
                 imgSelected = UIImage(systemName: "photo.fill")!
             }
             
-//            let imageData = imgSelected.jpegData(compressionQuality: 0.01)
-            let newEvent = EventModel(name: newName, description: newDescription, date: newDate, organiser: "a", type: newType, location: newLocation)
+            let imageData = imgSelected.jpegData(compressionQuality: 0.5)
+            let newEvent = EventModel(name: newName, description: newDescription,eventImage: imageData ,date: newDate, organiser: "a", type: newType, location: newLocation)
             eventListVM.create(newEvent)
-
+            presentationMode.wrappedValue.dismiss()
             
-            
-//            itemViewModel.addItem(name: newName, type: newType, price: newPrice, purchaseDate:newPurchaseDate, haveExp: newhaveExp, exp: newExp, image: image)
 
         }
         

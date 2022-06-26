@@ -15,7 +15,7 @@ struct EventModel: Identifiable, Codable {
     let description: String
     var userId: String?
     var eventId: String?
-    var storyImage: Data?
+    var eventImage: Data?
     let date: Date
     let organiser: String?
     let type: String

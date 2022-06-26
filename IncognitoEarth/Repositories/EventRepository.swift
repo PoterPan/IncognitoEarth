@@ -62,31 +62,23 @@ class EventRepository: ObservableObject {
         let document = store.collection(path).document()
         let eventID = document.documentID
         
-        do {
-            var newEvent = event
-            newEvent.userId = self.userId
-            newEvent.eventId = eventID
-            _ = try store.collection(path).addDocument(from: newEvent)
-            } catch {
-              fatalError("Unable to add card: \(error.localizedDescription).")
+        ImageManager.instance.uploadStoryImage(eventID: eventID, image: event.eventImage!) { (_ success: Bool) in
+            if success {
+                do {
+                    var newEvent = event
+                    newEvent.userId = self.userId
+                    newEvent.eventId = eventID
+                    _ = try self.store.collection(self.path).addDocument(from: newEvent)
+                } catch {
+                    fatalError("Unable to add card: \(error.localizedDescription).")
+                }
+                return
+                
+            } else {
+                print("Error uploading post image to firebase")
+                return
             }
-//        ImageManager.instance.uploadStoryImage(storyID: eventID, image: event.storyImage!) { (_ success: Bool) in
-//
-//            if success {
-//                do {
-//                    var newEvent = event
-//                     newEvent.userId = self.userId
-//                     newEvent.eventId = eventID
-//                    _ = try self.store.collection(self.path).addDocument(from: newEvent)
-//                } catch {
-//                    fatalError("Unable to add card: \(error.localizedDescription).")
-//                }
-//              return
-//            } else {
-//                print("Error uploading post image to firebase")
-//                return
-//            }
-//        }
+        }
     }
 //
 //    func remove(_ story: Story) {

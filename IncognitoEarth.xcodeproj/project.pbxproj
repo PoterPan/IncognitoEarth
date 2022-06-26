@@ -30,6 +30,10 @@
 		E7A4CF362864D0B100404D8B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF352864D0B100404D8B /* FirebaseStorageCombine-Community */; };
 		E7A4CF3C2864E05200404D8B /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */; };
 		E7A4CF512865E90B00404D8B /* EventBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF502865E90B00404D8B /* EventBlockView.swift */; };
+		E7A4CF5628683E7600404D8B /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5528683E7600404D8B /* EventDetailView.swift */; };
+		E7A4CF5828684A0500404D8B /* EventDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5728684A0500404D8B /* EventDetailCardView.swift */; };
+		E7A4CF5A28684FCE00404D8B /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5928684FCE00404D8B /* LikeButton.swift */; };
+		E7A4CF5E2868634200404D8B /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF5D2868634200404D8B /* FloatingActionButton.swift */; };
 		E7B7CA6D28622C710021059E /* AddingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA6C28622C710021059E /* AddingEventView.swift */; };
 		E7B7CA70286231C00021059E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA6F286231C00021059E /* ImagePicker.swift */; };
 		E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7CA722864BFB00021059E /* EventRepository.swift */; };
@@ -77,6 +81,10 @@
 		E7A4CF202864CE2800404D8B /* UploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 		E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		E7A4CF502865E90B00404D8B /* EventBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlockView.swift; sourceTree = "<group>"; };
+		E7A4CF5528683E7600404D8B /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		E7A4CF5728684A0500404D8B /* EventDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailCardView.swift; sourceTree = "<group>"; };
+		E7A4CF5928684FCE00404D8B /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		E7A4CF5D2868634200404D8B /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		E7B7CA6C28622C710021059E /* AddingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingEventView.swift; sourceTree = "<group>"; };
 		E7B7CA6F286231C00021059E /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E7B7CA722864BFB00021059E /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
@@ -127,13 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				E7A3E2BA285F6544008B417D /* ContentView.swift */,
-				E719F4CF2860346D0097F224 /* EventView.swift */,
-				E719F4CA285F86BE0097F224 /* EventCardView.swift */,
-				E7A4CF502865E90B00404D8B /* EventBlockView.swift */,
 				E7BDFF5D2860DBFB0074AFF6 /* Home.swift */,
 				E7BDFF602860DC830074AFF6 /* LoginStatusView.swift */,
 				E7BDFF5C2860DBFB0074AFF6 /* LoginPage.swift */,
-				E7B7CA6C28622C710021059E /* AddingEventView.swift */,
+				E7A4CF5428683E2400404D8B /* Event */,
+				E7A4CF5D2868634200404D8B /* FloatingActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,8 +147,8 @@
 		E719F4CD2860342E0097F224 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E7BDFF622860E13A0074AFF6 /* EventViewModel.swift */,
 				E7BDFF5A2860DAB00074AFF6 /* LoginViewModel.swift */,
+				E7BDFF622860E13A0074AFF6 /* EventViewModel.swift */,
 				E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -187,8 +193,6 @@
 				E7B7CA712864BF840021059E /* Repositories */,
 				E719F4CD2860342E0097F224 /* ViewModels */,
 				E7A4CF232864CE3800404D8B /* Utils */,
-				E7A4CF1F2864CE2800404D8B /* ImageManager.swift */,
-				E7A4CF202864CE2800404D8B /* UploadImage.swift */,
 				E7A3E2BC285F6546008B417D /* Assets.xcassets */,
 				E7A3E2BE285F6546008B417D /* Preview Content */,
 			);
@@ -224,8 +228,24 @@
 			isa = PBXGroup;
 			children = (
 				E7B7CA6E286231AA0021059E /* UIViewRepresentables */,
+				E7A4CF1F2864CE2800404D8B /* ImageManager.swift */,
+				E7A4CF202864CE2800404D8B /* UploadImage.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E7A4CF5428683E2400404D8B /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				E719F4CF2860346D0097F224 /* EventView.swift */,
+				E719F4CA285F86BE0097F224 /* EventCardView.swift */,
+				E7A4CF502865E90B00404D8B /* EventBlockView.swift */,
+				E7B7CA6C28622C710021059E /* AddingEventView.swift */,
+				E7A4CF5528683E7600404D8B /* EventDetailView.swift */,
+				E7A4CF5728684A0500404D8B /* EventDetailCardView.swift */,
+				E7A4CF5928684FCE00404D8B /* LikeButton.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		E7B7CA6E286231AA0021059E /* UIViewRepresentables */ = {
@@ -399,15 +419,19 @@
 			files = (
 				E719F4CB285F86BE0097F224 /* EventCardView.swift in Sources */,
 				E7A3E2BB285F6544008B417D /* ContentView.swift in Sources */,
+				E7A4CF5828684A0500404D8B /* EventDetailCardView.swift in Sources */,
 				E7BDFF5B2860DAB00074AFF6 /* LoginViewModel.swift in Sources */,
 				E7BDFF632860E13A0074AFF6 /* EventViewModel.swift in Sources */,
 				E7A4CF222864CE2800404D8B /* UploadImage.swift in Sources */,
 				E7BDFF612860DC830074AFF6 /* LoginStatusView.swift in Sources */,
 				E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */,
 				E7A4CF212864CE2800404D8B /* ImageManager.swift in Sources */,
+				E7A4CF5E2868634200404D8B /* FloatingActionButton.swift in Sources */,
 				E7A3E2B9285F6544008B417D /* IncognitoEarthApp.swift in Sources */,
 				E7BDFF5E2860DBFB0074AFF6 /* LoginPage.swift in Sources */,
 				E719F4D02860346D0097F224 /* EventView.swift in Sources */,
+				E7A4CF5628683E7600404D8B /* EventDetailView.swift in Sources */,
+				E7A4CF5A28684FCE00404D8B /* LikeButton.swift in Sources */,
 				E7BDFF5F2860DBFB0074AFF6 /* Home.swift in Sources */,
 				E7A4CF3C2864E05200404D8B /* EventListViewModel.swift in Sources */,
 				E7B7CA70286231C00021059E /* ImagePicker.swift in Sources */,
@@ -576,6 +600,7 @@
 				DEVELOPMENT_TEAM = WTV7G438ZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera usage permision to take a photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -605,6 +630,7 @@
 				DEVELOPMENT_TEAM = WTV7G438ZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera usage permision to take a photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
