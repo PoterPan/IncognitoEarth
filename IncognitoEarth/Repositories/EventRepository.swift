@@ -19,26 +19,28 @@ class EventRepository: ObservableObject {
    
     @Published var events: [EventModel] = []
     
-    var userId = ""
+//    var userId = ""
 
-    private let authenticationService = AuthenticationService()
+//    private let authenticationService = AuthenticationService()
    
     private var cancellables: Set<AnyCancellable> = []
     
     init() {
-      authenticationService.$user
-        .compactMap { user in
-          user?.uid
-        }
-        .assign(to: \.userId, on: self)
-        .store(in: &cancellables)
-
-      authenticationService.$user
-        .receive(on: DispatchQueue.main)
-        .sink { [weak self] _ in
-          self?.get()
-        }
-        .store(in: &cancellables)
+        self.get()
+        
+//      authenticationService.$user
+//        .compactMap { user in
+//          user?.uid
+//        }
+//        .assign(to: \.userId, on: self)
+//        .store(in: &cancellables)
+//
+//      authenticationService.$user
+//        .receive(on: DispatchQueue.main)
+//        .sink { [weak self] _ in
+//          self?.get()
+//        }
+//        .store(in: &cancellables)
     }
     
     func get(){
@@ -49,9 +51,7 @@ class EventRepository: ObservableObject {
                     return
                 }
                 
-                // 5
                 self.events = querySnapshot?.documents.compactMap { document in
-                    // 6
                     try? document.data(as: EventModel.self)
                 } ?? []
                 print("data loaded")
@@ -66,8 +66,8 @@ class EventRepository: ObservableObject {
             if success {
                 do {
                     var newEvent = event
-                    newEvent.userId = self.userId
-                    newEvent.organiser = self.userId
+//                    newEvent.userId = self.userId
+                    newEvent.organiser = "Developing..."
                     newEvent.eventId = eventID
                     _ = try self.store.collection(self.path).addDocument(from: newEvent)
                 } catch {
@@ -81,10 +81,10 @@ class EventRepository: ObservableObject {
             }
         }
     }
-//
-//    func remove(_ story: Story) {
-//        guard let storyId = story.storyId else { return }
-//        guard let docId = story.id else { return}
+
+//    func remove(_ event: EventModel) {
+//        guard let eventId = event.eventId else { return }
+//        guard let docId = event.id else { return}
 //
 //        store.collection(path).document(docId).delete { error in
 //            if let error = error {
@@ -93,7 +93,7 @@ class EventRepository: ObservableObject {
 //                print("Successfully deleted  story text")
 //            }
 //        }
-//        storage.reference().child("stories/\(storyId)/1").delete { error in
+//        storage.reference().child("stories/\(eventId)/1").delete { error in
 //            if let error = error {
 //                print("Unable to delete story image: \(error.localizedDescription)")
 //            } else {
@@ -102,15 +102,15 @@ class EventRepository: ObservableObject {
 //        }
 //
 //    }
+
+//    func updateEvent(_ event: EventModel) {
+//        guard let eventDocId = event.id else { return }
 //
-//    func updateStory(_ story: Story) {
-//        guard let storyDocId = story.id else { return }
-//
-//        ImageManager.instance.uploadStoryImage(storyID: story.storyId ?? "", image: story.storyImage!) { (_ success: Bool) in
+//        ImageManager.instance.uploadStoryImage(eventID: event.eventId ?? "", image: event.eventImage!) { (_ success: Bool) in
 //
 //            if success {
 //                do {
-//                    try self.store.collection(self.path).document(storyDocId).setData(from: story)
+//                    try self.store.collection(self.path).document(eventDocId).setData(from: event)
 //                } catch {
 //                    fatalError("Unable to add card: \(error.localizedDescription).")
 //                }
@@ -121,6 +121,6 @@ class EventRepository: ObservableObject {
 //            }
 //        }
 //    }
-//
+
 
 }

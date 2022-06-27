@@ -13,12 +13,12 @@ struct Home: View {
     
     var body: some View {
         TabView {
-            LoginStatusView().tabItem{
-                NavigationLink(destination: LoginStatusView()) {
-                    Image(systemName: "flag.fill")
-                    Text("LoginStatus")
-                }
-            }
+//            LoginStatusView().tabItem{
+//                NavigationLink(destination: LoginStatusView()) {
+//                    Image(systemName: "flag.fill")
+//                    Text("LoginStatus")
+//                }
+//            }
             
             EventView().tabItem{
                 NavigationLink(destination: EventView()) {

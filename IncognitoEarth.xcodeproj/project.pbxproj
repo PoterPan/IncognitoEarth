@@ -18,7 +18,6 @@
 		E7A3E2D4285F6546008B417D /* IncognitoEarthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2D3285F6546008B417D /* IncognitoEarthUITests.swift */; };
 		E7A3E2D6285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A3E2D5285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift */; };
 		E7A4CF212864CE2800404D8B /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF1F2864CE2800404D8B /* ImageManager.swift */; };
-		E7A4CF222864CE2800404D8B /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4CF202864CE2800404D8B /* UploadImage.swift */; };
 		E7A4CF262864D0B100404D8B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF252864D0B100404D8B /* FirebaseAnalytics */; };
 		E7A4CF282864D0B100404D8B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF272864D0B100404D8B /* FirebaseAnalyticsSwift */; };
 		E7A4CF2A2864D0B100404D8B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E7A4CF292864D0B100404D8B /* FirebaseAuth */; };
@@ -77,7 +76,6 @@
 		E7A3E2D3285F6546008B417D /* IncognitoEarthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoEarthUITests.swift; sourceTree = "<group>"; };
 		E7A3E2D5285F6546008B417D /* IncognitoEarthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoEarthUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E7A4CF1F2864CE2800404D8B /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		E7A4CF202864CE2800404D8B /* UploadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 		E7A4CF3B2864E05200404D8B /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		E7A4CF502865E90B00404D8B /* EventBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlockView.swift; sourceTree = "<group>"; };
 		E7A4CF5528683E7600404D8B /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 			children = (
 				E7B7CA6E286231AA0021059E /* UIViewRepresentables */,
 				E7A4CF1F2864CE2800404D8B /* ImageManager.swift */,
-				E7A4CF202864CE2800404D8B /* UploadImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 				E7A4CF5828684A0500404D8B /* EventDetailCardView.swift in Sources */,
 				E7BDFF5B2860DAB00074AFF6 /* LoginViewModel.swift in Sources */,
 				E7BDFF632860E13A0074AFF6 /* EventViewModel.swift in Sources */,
-				E7A4CF222864CE2800404D8B /* UploadImage.swift in Sources */,
 				E7BDFF612860DC830074AFF6 /* LoginStatusView.swift in Sources */,
 				E7B7CA732864BFB00021059E /* EventRepository.swift in Sources */,
 				E7A4CF212864CE2800404D8B /* ImageManager.swift in Sources */,
